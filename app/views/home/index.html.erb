@@ -1,0 +1,23 @@
+<h1>Welcome <%= @user.email %></h1>
+<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+
+<% if user_signed_in? %>
+  <%= form_for @user, url: home_path(current_user.id) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br />
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+    <br />
+    <%= f.label :gender %>
+    <%= f.select :gender, options_for_select([['male', 'male'], ['female', 'female']]) %>
+    <br />
+    <%= f.label :interested_in_male %>
+    <%= f.check_box :interested_in_male %>
+    <br />
+    <%= f.label :interested_in_female %>
+    <%= f.check_box :interested_in_female %>
+    <br />
+    <%= f.submit %>
+  <% end %>
+<% end %>
