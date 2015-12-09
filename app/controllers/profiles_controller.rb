@@ -11,7 +11,6 @@ class ProfilesController < ApplicationController
   end
 
   def edit
-    binding.pry
     @profile = Profile.find(params[:id])
   end
 
@@ -25,11 +24,12 @@ class ProfilesController < ApplicationController
   end
 
   def new
+    @user = current_user
     @profile = Profile.new
   end
 
   def create
-
+    @user = current_user
     @profile = Profile.new(profile_params)
     if @profile.save
       redirect_to user_profile_path(current_user.id, @profile)
@@ -39,6 +39,12 @@ class ProfilesController < ApplicationController
   end
 
   def destroy
+    @profile = current_user.profile
+    if @profile.destroy
+      redirect_to user_path
+    else
+      redirect_to user_profile_path(@profile)
+    end
   end
 
   private

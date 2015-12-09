@@ -24,8 +24,7 @@ class HomeController < ApplicationController
   def update
     @user = current_user
     if @user.update(user_params)
-      binding.pry
-      redirect_to home_path
+       redirect_to home_path
     else
       render :edit
     end

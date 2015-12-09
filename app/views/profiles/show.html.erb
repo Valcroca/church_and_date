@@ -11,7 +11,9 @@
 <br />
 <h3>Interested in males: </h3><%= @profile.interested_in_males %>
 <br />
-<h3>Interested in females: </h3><%= @profile.interested_in_females %>
+<h3>Interested in females: </h3><%= @profile.interested_in_females %><br /><br />
 <%= link_to 'Edit Profile', edit_user_profile_path %>
+<%= button_to 'Sign Out', destroy_user_session_path, method: :delete %>
+
 
   

@@ -1,12 +1,13 @@
 class UsersController < ApplicationController
   def index
+binding.pry
     @user = current_user
-
+    @profile = @user.profile
   end
 
   def show
     @user = current_user
-    @profile = Profile.find(user_id)
+    @profile = @user.profile
 
   end
 

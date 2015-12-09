@@ -3,7 +3,7 @@
 
 <%= button_to 'Sign Out', destroy_user_session_path, method: :delete %>
 
-<% if @user.profile %>
+<% if @profile %>
   <%= link_to 'Your Profile', user_profiles_path(@user.id) %>
 <% else %>
   <%= link_to 'Create Profile', new_user_profile_path(@user.id) %>
