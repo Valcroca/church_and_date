@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  gender: MyString
+  age: 1
+  interested_in_males: false
+  interested_in_females: false
+
+two:
+  name: MyString
+  gender: MyString
+  age: 1
+  interested_in_males: false
+  interested_in_females: false

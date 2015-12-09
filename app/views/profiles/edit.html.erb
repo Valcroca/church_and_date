@@ -1,0 +1,21 @@
+<h1>Edit Your Profile</h1>
+
+
+  <%= form_for @profile do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br />
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+    <br />
+    <%= f.label :gender %>
+    <%= f.select :gender, options_for_select([['male', 'male'], ['female', 'female']]) %>
+    <br />
+    <%= f.label :interested_in_males %>
+    <%= f.check_box :interested_in_males %>
+    <br />
+    <%= f.label :interested_in_females %>
+    <%= f.check_box :interested_in_females %>
+    <br />
+    <%= f.submit %>
+  <% end %>

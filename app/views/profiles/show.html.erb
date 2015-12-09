@@ -1,0 +1,17 @@
+<h1>Your Profile</h1>
+
+<br />
+<h3>Name: </h3><%= @profile.name %>
+<br />
+<h3>Email: </h3><%= @user.email %>
+<br />
+<h3>Age: </h3><%= @profile.age %>
+<br />
+<h3>Gender: </h3><%= @profile.gender %>
+<br />
+<h3>Interested in males: </h3><%= @profile.interested_in_males %>
+<br />
+<h3>Interested in females: </h3><%= @profile.interested_in_females %>
+<%= link_to 'Edit Profile', edit_user_profile_path %>
+
+  
