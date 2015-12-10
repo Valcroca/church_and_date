@@ -1,5 +1,6 @@
+<div class='container'>
 <h1>Edit Your Profile</h1>
-
+<hr />
 
   <%= form_for @profile do |f| %>
     <%= f.label :name %>
@@ -9,16 +10,28 @@
     <%= f.number_field :age %>
     <br />
     <%= f.label :gender %>
-    <%= f.select :gender, options_for_select([['male', 'male'], ['female', 'female']]) %>
-    <br />
+    <p>
+     <input name="group1" type="radio" id="test4" />
+     <label for="test4">Male</label>
+    </p>
+     <input name="group1" type="radio" id="test3" />
+     <label for="test3">Female</label>
+    </p>
     <%= f.label :interested_in_males %>
-    <%= f.check_box :interested_in_males %>
-    <br />
+    <p>
+     <input type="checkbox" id="test5" />
+     <label for="test5">Males</label>
+    </p>
     <%= f.label :interested_in_females %>
-    <%= f.check_box :interested_in_females %>
+    <p>
+     <input type="checkbox" id="test6" />
+     <label for="test6">Females</label>
+    </p>
     <br />
-    <%= f.submit %>
+    <div class='waves-effect waves-light btn teal lighten-4'><%= f.submit %></div>
   <% end %>
-
-  <%= button_to 'Sign Out', destroy_user_session_path, method: :delete %>
-
+<br />
+<div class='waves-effect waves-light btn teal lighten-4'><%= link_to 'Go Back', user_profile_path(@user.id, @profile.id) %></div>
+<hr />
+<div class='waves-effect waves-light btn teal'><%= button_to 'Sign Out', destroy_user_session_path, method: :delete %></div>
+</div>

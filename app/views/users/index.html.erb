@@ -1,9 +1,11 @@
+<div class='container'>
 <h1>Welcome to Church and Date</h1>
 <hr />
-<%= link_to 'Your Profile', user_profile_path(@user.id, @profile.id) %>
+<div class='waves-effect waves-light btn teal lighten-4'><%= link_to 'Your Profile', user_profile_path(@user.id, @profile.id) %></div>
 
-<%= link_to 'Your Matches', user_profile_path(@user.id, @profile.id) %>
+<div class='waves-effect waves-light btn teal lighten-4'><%= link_to 'Your Matches', user_profile_path(@user.id, @profile.id) %></div>
 
 <hr />
-<%= button_to 'Sign Out', destroy_user_session_path, method: :delete %> 
-<%= button_to 'Destroy User', user_path(current_user), method: :delete %>
+<div class='waves-effect waves-light btn teal'><%= button_to 'Sign Out', destroy_user_session_path, method: :delete %></div>
+<div class='waves-effect waves-light btn teal'><%= button_to 'Destroy User', user_path(current_user), method: :delete %></div>
+</div>
