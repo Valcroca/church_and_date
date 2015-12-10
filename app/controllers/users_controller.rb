@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-binding.pry
+
     @user = current_user
     @profile = @user.profile
   end

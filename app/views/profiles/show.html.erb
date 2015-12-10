@@ -1,5 +1,5 @@
 <h1>Your Profile</h1>
-
+<hr />
 <br />
 <h3>Name: </h3><%= @profile.name %>
 <br />
@@ -11,8 +11,12 @@
 <br />
 <h3>Interested in males: </h3><%= @profile.interested_in_males %>
 <br />
-<h3>Interested in females: </h3><%= @profile.interested_in_females %><br /><br />
+<h3>Interested in females: </h3><%= @profile.interested_in_females %>
+<br /><br />
 <%= link_to 'Edit Profile', edit_user_profile_path %>
+<br />
+<%= link_to 'Your Interests', user_profile_path(@user.id, @profile.id) %>
+<hr />
 <%= button_to 'Sign Out', destroy_user_session_path, method: :delete %>
 
 

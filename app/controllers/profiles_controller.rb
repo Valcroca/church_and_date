@@ -1,13 +1,13 @@
 class ProfilesController < ApplicationController
 
   def index
-    @profile = Profile.find(params[:id])
     @user = current_user
+    @profile = @user.profile
   end
 
   def show
-    @profile = Profile.find(params[:id])
     @user = current_user
+    @profile = @user.profile
   end
 
   def edit
@@ -29,9 +29,8 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    @user = current_user
-    @profile = Profile.new(profile_params)
-    if @profile.save
+    @profile = Profile.find_by(user_id: params[:user_id])
+    if @profile.update(profile_params)
       redirect_to user_profile_path(current_user.id, @profile)
     else
       render :new
