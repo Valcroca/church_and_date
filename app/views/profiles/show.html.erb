@@ -1,21 +1,24 @@
 <h1>Your Profile</h1>
 <hr />
 <br />
-<h3>Name: </h3><%= @profile.name %>
+<h3>Name: <%= @profile.name %></h3>
 <br />
-<h3>Email: </h3><%= @user.email %>
+<h3>Email: <%= @user.email %></h3>
 <br />
-<h3>Age: </h3><%= @profile.age %>
+<h3>Age: <%= @profile.age %></h3>
 <br />
-<h3>Gender: </h3><%= @profile.gender %>
+<h3>Gender: <%= @profile.gender %></h3>
 <br />
-<h3>Interested in males: </h3><%= @profile.interested_in_males %>
+<h3>Interested in males: <%= @profile.interested_in_males %></h3>
 <br />
-<h3>Interested in females: </h3><%= @profile.interested_in_females %>
-<br /><br />
+<h3>Interested in females: <%= @profile.interested_in_females %></h3>
+<br />
+<hr />
 <%= link_to 'Edit Profile', edit_user_profile_path %>
-<br />
+
 <%= link_to 'Your Interests', user_profile_path(@user.id, @profile.id) %>
+
+<%= link_to 'Go Back', users_path %>
 <hr />
 <%= button_to 'Sign Out', destroy_user_session_path, method: :delete %>
 
