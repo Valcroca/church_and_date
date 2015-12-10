@@ -7,7 +7,6 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @profile = @user.profile
-
   end
 
   def new
@@ -50,7 +49,7 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)
   end
-
+  
 end
 
 
