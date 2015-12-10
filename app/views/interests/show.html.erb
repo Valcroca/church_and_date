@@ -1,5 +1,5 @@
-<h1>@interest.description</h1>
+<h1><%=@interest.description%></h1>
 
-<% @interest.profile_id.each do |f| %>
+<% @interest.profile_interests.each do |f| %>
   <%= @profile.name %>
 <% end %>

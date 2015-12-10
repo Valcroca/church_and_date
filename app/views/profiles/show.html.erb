@@ -19,6 +19,10 @@
 <div class='waves-effect waves-light btn teal lighten-4'><%= link_to 'Select Interests',profile_interests_path(@profile.id) %></div>
 
 <div class='waves-effect waves-light btn teal lighten-4'><%= link_to 'Go Back', users_path %></div>
+<%= link_to 'Go Back', users_path %>
+<%#= link_to 'Your Interests', user_profile_path(@user.id, @profile.id) %>
+<%#= link_to 'Your Interests', profile_interest_path() %>
+<%= link_to 'Select Interests', profile_interests_path(@profile.id) %>
 <hr />
 <div class='waves-effect waves-light btn teal'><%= button_to 'Sign Out', destroy_user_session_path, method: :delete %></div>
 </div>

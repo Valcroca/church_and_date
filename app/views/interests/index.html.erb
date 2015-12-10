@@ -1,0 +1,19 @@
+<h1>Interests:</h1>
+
+
+
+<% @interests.each do |f| %>
+  <%= link_to f.description, profile_interest_path(@profile.id, f.id) %> |
+   <!-- url: { action: "update" } -->
+  <% form_for [@profile, f] do |g| %>
+    <p>
+      <input type="checkbox" id="test5" />
+      <label for="test5">
+        <%= g %>
+      </label>
+    </p>
+     <%#= g.check_box :interests  %>
+  <% end %>
+  <br>
+  <br>
+<% end %>
