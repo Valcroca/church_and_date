@@ -1,5 +1,5 @@
 class AddColumnsToUser < ActiveRecord::Migration
-  has_one :profile
+  # => has_one :profile
   def change
     add_column :users, :name, :string
     add_column :users, :gender, :string

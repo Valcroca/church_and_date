@@ -1,5 +1,5 @@
 class CreateInterests < ActiveRecord::Migration
-  belongs_to :profile
+  #belongs_to :profile
   def change
     create_table :interests do |t|
 

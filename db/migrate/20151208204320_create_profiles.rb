@@ -1,7 +1,7 @@
 class CreateProfiles < ActiveRecord::Migration
 
-  belongs_to :users
-  has_many :interests
+  # belongs_to :users
+  # has_many :interests
 
   def change
     create_table :profiles do |t|

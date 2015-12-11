@@ -6,12 +6,49 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+ <body>
+  <header>
+    <div>
+      <div class="row">
+        <h1 class="center-align"> Church and Date /\</h1>
+       <div class="heart-shape"></div>
+    </div>
+  </header> 
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
 
-<%= yield %>
 
-</body>
+  <img class="rsponsive-img" src="/assets/sunset.jpg">
+  <div class="container">
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <%= yield %>
+  </div>
+   <footer>
+     <div class="footer-copyright">
+       <div class="container">
+        <h3 class="center-align"> ©2015 ChurchDate LLP.</h3>
+       </div> 
+   </footer>
+  </body>
 </html>
+
+
+ <!-- <div class="row">
+      <div class="light-blue lighten-1">stuff</div>
+      <div class="col l4 s12 red darken-4">asfgh</div>
+      <div class="col l4 s12 red darken-4">asdfg</div>
+      <div class="col l4 s12 red darken-4">This div is 12-columns wide</di>
+ </div>
+ -->
+  <!-- <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Church and Date</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav> -->
